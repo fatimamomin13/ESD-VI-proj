@@ -1,10 +1,11 @@
 all of the changes in the code are mentioned here
 
+CHANGES IN INDEX.HTML
 - line:39   <body id='body'>
   line:111<div class="rightSideBar" onclick="openChat()">
   line:242<script src="/lowerTab.js"></script>
 
-how to run 
+HOW TO RUN
 - open cmd on path 'ESD-VI'
 - type node index (confirm server starts on 8080)
 - open crome and type 'localhost:8080'
