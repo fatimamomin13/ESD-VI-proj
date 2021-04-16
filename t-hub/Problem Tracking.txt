@@ -1,0 +1,5 @@
+here all problems related to website are noted down 
+
+- links/buttons are redirecting to 'w3' website.
+- vague response of 'This Page' tab related to hardware software.
+- 'Feedback' is provided via mongoDB server but Email has been used. 😜 (parameters are variable)
