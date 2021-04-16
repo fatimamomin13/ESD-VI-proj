@@ -1,4 +1,5 @@
-var lowerTabHTML = `
+var myDiv = document.createElement("div");
+myDiv.innerHTML = `
     <style>
     .feedback-popup {
         display: none;
@@ -111,7 +112,7 @@ var lowerTabHTML = `
     <!-- <button onclick="openFeedback()">Feedback/Suggestions</button> -->
     <!-- <button onclick="openChat()">Chat Room</button> -->`;
 
-document.getElementById("body").innerHTML += lowerTabHTML;
+    document.body.appendChild( myDiv );
 
 //feedback
 function openFeedback() {
