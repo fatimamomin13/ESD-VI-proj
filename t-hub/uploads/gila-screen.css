@@ -175,6 +175,11 @@ acronym,
   font-weight: bold;
   margin: 1.25ex 1ex;
   padding: 0.9ex 1ex;
+  opacity: 0.8;
+}
+
+.rightSideBar .sideBarTitle:hover {
+  opacity: 1;
 }
 
 .rightSideBar a {
