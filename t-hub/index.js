@@ -17,6 +17,33 @@ app.get("/", (req, res) => {
 //     res.sendFile(__dirname + '/lowerTab.js');
 // })
 
+//read all quiz files
+uploadDirectory = "/quiz"
+fs.readdir(__dirname + uploadDirectory, function (err, files) {
+    if (err) {
+        return console.log("Unable to scan uploaded files: " + err);
+    } 
+    files.forEach(function (file) {
+        app.get("/" + file, (req, res) => {
+            uploadDirectory = "/quiz"
+            res.sendFile(__dirname + uploadDirectory + "/" + file);
+        })
+    });
+});
+
+uploadDirectory = "/quiz/js"
+fs.readdir(__dirname + uploadDirectory, function (err, files) {
+    if (err) {
+        return console.log("Unable to scan uploaded files: " + err);
+    } 
+    files.forEach(function (file) {
+        app.get("/js/" + file, (req, res) => {
+            uploadDirectory = "/quiz/js"
+            res.sendFile(__dirname + uploadDirectory + "/" + file);
+        })
+    });
+});
+
 //read all uploaded files
 uploadDirectory = "/uploads"
 fs.readdir(__dirname + uploadDirectory, function (err, files) {
@@ -25,6 +52,7 @@ fs.readdir(__dirname + uploadDirectory, function (err, files) {
     } 
     files.forEach(function (file) {
         app.get("/" + file, (req, res) => {
+            uploadDirectory = "/uploads"
             res.sendFile(__dirname + uploadDirectory + "/" + file);
         })
     });
